@@ -1,0 +1,25 @@
+{
+  "name": "acf-water",
+  "license": "WTFPL",
+  "devDependencies": {
+    "postcss": "^8.4.13",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-cli": "^9.1.0",
+    "postcss-csso": "^6.0.0",
+    "postcss-nested": "^5.0.6"
+  },
+  "scripts": {
+    "build": "postcss src/index.scss -o theme/water.css",
+    "watch": "yarn build -w"
+  },
+  "dependencies": {
+    "ress": "^5.0.2",
+    "water.css": "^2.1.1"
+  },
+  "version": "0.1.0",
+  "description": "Alpine acf theme",
+  "main": "src/index.scss",
+  "repository": "https://github.com/mchaNetwork/acf-water.git",
+  "author": "mochaaP <npm@mochaa.ws>",
+  "private": true
+}
