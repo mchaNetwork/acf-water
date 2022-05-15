@@ -1,0 +1,228 @@
+@import 'water.css/out/water';
+@import 'ress/ress';
+@import 'version';
+
+body {
+  font-family: system-ui, "Inter UI", Roboto, "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1000px;
+
+  >#page {
+    width: 100%;
+
+    >#header {
+      display: flex;
+      position: sticky;
+      top: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: var(--background);
+
+      >h1 {
+        display: none;
+      }
+
+      >.hostname {
+        font-family: monospace;
+      }
+    }
+
+    >#main {
+      >#nav {
+        >ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: space-between;
+          }
+
+          list-style: none;
+          padding: 0.5rem;
+
+          >li {
+            padding-right: 1.5rem;
+
+            @media (min-width: 768px) {
+              padding: 0 1.5rem 0 1rem;
+
+              &:nth-child(1) {
+                padding-left: 0;
+              }
+            }
+
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-position: center right;
+
+            &:hover {
+              >ul {
+                visibility: visible;
+              }
+            }
+
+            &>ul {
+              z-index: 999;
+              visibility: hidden;
+              position: relative;
+              top: 0;
+              right: 0.25rem;
+              height: 0;
+              width: 0;
+
+              >li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: var(--background);
+                width: 12rem;
+
+                >a {
+                  height: 100%;
+                  width: 100%;
+                  padding: 0.5rem;
+
+                  &:hover {
+                    background-color: var(--button-hover);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      >#subnav {
+        >ul {
+          display: flex;
+          flex-direction: column;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+          }
+
+          list-style: none;
+
+          >li {
+            display: flex;
+            width: 100%;
+            padding: 0 0.25rem;
+
+            >a {
+              padding: 0.5rem;
+              width: 100%;
+              background-color: var(--background-alt);
+              text-align: center;
+
+
+              &:hover,
+              &:focus {
+                background-color: var(--button-hover);
+              }
+            }
+
+            &:nth-child(1) {
+              >a {
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+              }
+            }
+
+            &:nth-last-child(1) {
+              >a {
+                border-bottom-left-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+              }
+            }
+
+            @media (min-width: 768px) {
+              >a {
+                border-radius: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      >#content {
+        padding: 0 0.5rem;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          display: none
+        }
+
+        .item {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          >.right {
+            >* { margin-left: 1rem; text-align: right; }
+            >.descr { width: 272px; }
+          }
+        }
+
+        form {
+          width: auto;
+          display: inline-block;
+
+          input[type="submit"],
+          input[type="button"] {
+            display: inline-block;
+            border-radius: 0.5rem;
+          }
+
+          input[type="text"],
+          input[type="password"] {
+            display: inline-block;
+            border-radius: 0.5rem;
+            background-color: var(--background-alt)
+          }
+        }
+
+        table {
+          width: auto;
+          min-width: 100%;
+
+          >tbody:nth-child(1)>tr:nth-child(1)>td:nth-child(2n+1) {
+            width: auto;
+          }
+        }
+
+        pre {
+          overflow-x: scroll;
+          max-width: 1000px;
+        }
+      }
+
+      padding: 0 10px;
+    }
+
+    >#footer {
+      display: flex;
+      justify-content: center;
+      font-family: monospace;
+      opacity: 0.5;
+      padding: 1rem 0.25rem;
+
+      p:after {
+        display: block;
+        content: "water theme v$version";
+      }
+    }
+  }
+}
