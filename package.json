@@ -2,7 +2,7 @@
   "name": "acf-water",
   "license": "WTFPL",
   "devDependencies": {
-    "postcss": "8.4.13",
+    "postcss": "8.4.14",
     "postcss-advanced-variables": "3.0.1",
     "postcss-cli": "9.1.0",
     "postcss-csso": "6.0.0",
