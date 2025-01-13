@@ -310,10 +310,10 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha1-7RQaasBDqEnqWISY59yosVMw6Qw=
 
-postcss-advanced-variables@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-advanced-variables/-/postcss-advanced-variables-4.0.0.tgz#502724da72156c7697f0f53ca7cece275ecd8239"
-  integrity sha512-ooRwPl53XDEfZtc52BimJFwTKFPqeJGmSUuX90ZsN+ZTP9ViTsyLbRcD0gwtEw7su0o6P71ps7gpnOa4eGkx4g==
+postcss-advanced-variables@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-advanced-variables/-/postcss-advanced-variables-5.0.0.tgz#23e2b33d4d6a69085d0917364fb21dc862fd4c5e"
+  integrity sha512-g2SwNfZ1bJxoch51VqY7FMtxJ8+sJCxOqVi1vBAfzsiFgf5xRXhWIJXbUW6FXBJK0JQedOfYS5DtuVEuQLXVnQ==
   dependencies:
     "@csstools/sass-import-resolve" "^1.0.0"
 
