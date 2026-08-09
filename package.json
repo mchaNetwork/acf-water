@@ -13,7 +13,7 @@
     "watch": "yarn build -w"
   },
   "dependencies": {
-    "ress": "5.0.2",
+    "ress": "6.0.0",
     "water.css": "2.1.1"
   },
   "version": "0.1.0",
